@@ -1,3 +1,3 @@
 export default defineBackground(() => {
-  console.log('git-expand!', { id: browser.runtime.id });
+  console.log('git-expand is enabled.');
 });

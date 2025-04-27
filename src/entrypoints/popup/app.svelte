@@ -2,7 +2,7 @@
 </script>
 
 <main>
-  <a href="https://git.dev" target="_blank" rel="noreferrer">
+  <a href="https://github.com/prelude-rs/git-expand" target="_blank" rel="noreferrer">
     <img src="/git-expand.png" class="logo git-expand" alt="git-expand Logo" />
   </a>
   <h1>git-expand</h1>
