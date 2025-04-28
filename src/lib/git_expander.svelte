@@ -4,8 +4,6 @@
   console.debug('git-expander: component');
 
   function loadMoreContent() {
-    console.debug(`git-expander: checking for more more content to load.`);
-
     let paginationForm = document.querySelector('form.pagination-loader-container');
     let waitCount = 0;
     if (paginationForm) {
@@ -14,28 +12,28 @@
         const buttonText = paginationButton.innerText;
         if (buttonText === message) {
           waitCount++;
-          console.debug(`git-expander: waiting for content to load: wait count is ${waitCount}.`);
+          console.debug(`git-expander waiting for requested content to load: wait count is ${waitCount}.`);
 
           if (waitCount > 5) {
-            console.debug(`git-expander: waiting for too long (count is ${waitCount}). Will stop loading.`);
+            console.debug(`git-expander waiting for too long (count is ${waitCount}). Will stop loading.`);
             message = null;
             return;
           }
         } else {
-          console.debug(`git-expander: found content to load: ${buttonText}`);
+          console.debug(`git-expander found more content to load: ${buttonText}`);
           waitCount = 0;
           message = buttonText;
           paginationButton.click();
         }
 
         // Run loadMoreContent again after the 'click' or a 'wait' branches above
-        setTimeout(loadMoreContent, 1000);
+        setTimeout(loadMoreContent, 1200);
       } else {
-        console.debug(`git-expander: There is no pending content to load.`);
+        console.debug(`git-expander done.`);
         message = null;
       }
     } else {
-      console.debug(`git-expander: There is no pending content to load.`);
+      console.debug(`git-expander done.`);
       message = null;
     }
   }
@@ -56,9 +54,11 @@
     top: 10px;
     right: 10px;
     padding: 10px;
-    background-color: #444;
-    color: #fff;
-    opacity: 0.8;
-    border: 1px solid #ccc;
+    background-color: #006000;
+    color: #FFF;
+    opacity: 0.85;
+    border: 1px solid #CCC;
+    border-radius: 5px 5px 5px 5px; 
+    font-weight: 600;
   }
 </style>

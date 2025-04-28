@@ -1,6 +1,6 @@
 # Git Expand
 
-Browser extension to expand a Git pull request page, loading hidden itens and conversations automatically.
+Browser extension to expand a Git pull request page, loading hidden items and conversations automatically.
 
 ## Developed
 
@@ -19,3 +19,10 @@ pnpm zip:firefox
 pnpm i
 pnpm zip
 ```
+
+# Example
+
+Try navigating to a pull request page with lots of comments and items.
+This extension will load all hidden itmes and conversation on page load.
+
+Ex. [https://github.com/sveltejs/svelte/pull/15000]
